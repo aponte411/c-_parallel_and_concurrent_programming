@@ -1,4 +1,5 @@
 #include <map>
+#include <iostream>
 #include <string>
 #include <chrono>
 #include <thread>
@@ -25,7 +26,7 @@ int main(){
     thread2.join();
     // Print results
     for (const auto& web_page: web_pages){
-        printf("Url: %s\n", web_page.first);
-        printf("Result: %s\n", web_page.second);
+        std::cout << "URL: " << web_page.first << "\n";
+        std::cout << "Result: " << web_page.second << "\n";
     }
 }
